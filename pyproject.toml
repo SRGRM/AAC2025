@@ -1,0 +1,24 @@
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "BLE", "SIM"]
+# Keep typing.Dict / List / Optional style for compatibility with older Python tooling.
+ignore = ["UP006", "UP007", "UP035", "UP045", "SIM108"]
+
+[tool.ruff.lint.pycodestyle]
+# black wraps code at 100 columns; the inline comments of the CONFIG blocks may run a bit longer.
+max-line-length = 110
+
+[tool.ruff.lint.isort]
+known-first-party = ["aac", "classifier", "template_extractor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

@@ -1,0 +1,14 @@
+# Install the PyTorch build that matches your CUDA driver first (see README).
+torch>=1.12
+torchvision>=0.13
+timm>=0.6.12
+numpy
+Pillow
+scikit-learn
+fastapi
+uvicorn
+requests
+
+# Optional
+# umap-learn, matplotlib    UMAP plot of the validation embeddings (umap_plot = True)
+# pytest, httpx             test suite
